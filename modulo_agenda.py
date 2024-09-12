@@ -1,4 +1,3 @@
-
 def adicionar_contato(agenda):
     print(f"Dados para cadastro de contato\n")
     nome = input(f"Nome: ")
@@ -12,7 +11,8 @@ def adicionar_contato(agenda):
         "favorito": False
     })
     print(f"dados cadastro com sucesso\n")
-    return 
+    return
+
 
 def visualizar_contato(agenda):
     print(f"\ncontatos salvos")
@@ -21,6 +21,7 @@ def visualizar_contato(agenda):
         print(f"Telefone: ", cadastrados["telefone"])
         print(f"Email: ", cadastrados["email"])
     return
+
 
 def editar_contato(agenda):
     nome = input(f"Digite o nome do contado deseja editar!! ")
@@ -32,19 +33,21 @@ def editar_contato(agenda):
             cadastrados["telefone"] = input(f"Telefone: ")
             cadastrados["email"] = input(f"Email: ")
         else:
-            print("contado não cadastrado")    
+            print("contado não cadastrado")
     return
+
 
 def favoritar_contato(agenda):
     nome = input("Digite um nome do contato que deseja favoritar: ")
     for cadastrados in agenda:
         if cadastrados["nome"] == nome:
             if cadastrados["favorito"]:
-                print("Contato ja esta macado como favorito")
-            else:    
+                print("Contato ja esta marcado como favorito")
+            else:
                 cadastrados["favorito"] = True
                 print("Contato salvo como favorito ✅", nome)
     return
+
 
 def desfavoritar_contato(agenda):
     nome = input("Digite um nome do contato que deseja desfavoritar: ")
@@ -55,12 +58,14 @@ def desfavoritar_contato(agenda):
                 cadastrados["favorito"] = False
     return
 
+
 def Lista_Favoritos(agenda):
     print("\nLista de contatos favoritos:")
     for cadastrados in agenda:
         if cadastrados["favorito"]:
             print("✅", cadastrados["nome"])
     return
+
 
 def deleta_contato(agenda):
     nome = input(f"Qual contato deeja deleta? ")
