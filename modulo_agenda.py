@@ -1,6 +1,6 @@
 
 def adicionar_contato(agenda):
-    print(f"dados para cadastro de contato\n")
+    print(f"Dados para cadastro de contato\n")
     nome = input(f"Nome: ")
     telefone = input(f"Telefone: ")
     email = input(f"Email: ")
